@@ -17,7 +17,7 @@ public class request {
     public request(@JsonProperty("domain") String domain,
                    @JsonProperty("city") String city,
                    @JsonProperty("country") String country,
-                   int ridus) {
+                   @JsonProperty("ridus") int ridus) {
         this.domain = domain;
         this.city = city;
         this.country = country;
@@ -33,7 +33,7 @@ public class request {
         this.domain = domain;
         this.city = city;
         this.country = country;
-        ridus = 10;
+        ridus = 5;
     }
 
     public String getDomain() {
