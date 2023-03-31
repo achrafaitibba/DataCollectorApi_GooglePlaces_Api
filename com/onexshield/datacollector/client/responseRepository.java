@@ -74,10 +74,11 @@ public class responseRepository implements IResponse {
         // Extract the required data from the details and store them in an ArrayList of String arrays
         ArrayList<response> data = new ArrayList<>();
         for (PlaceDetails details : detailsList) {
+
             data.add(new response(
                     details.name = details.name == null ? "NoData_Hh" : details.name,
-                    details.addressComponents[2].longName ,
-                    details.addressComponents[4].longName = details.addressComponents[4].longName == null ? "NoData_Hh" : details.addressComponents[4].longName,
+                    request.getCity(),
+                    request.getCountry(),
                     details.formattedAddress = details.formattedAddress == null ? "NoData_Hh" : details.formattedAddress,
                     details.formattedPhoneNumber = details.formattedPhoneNumber == null ? "NoData_Hh" : details.formattedPhoneNumber,
                     details.website /*= details.website == null ? new URL(" https://www.example.com:8080/path?param1=value1") : details.website*/,

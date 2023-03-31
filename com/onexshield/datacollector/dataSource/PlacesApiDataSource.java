@@ -17,7 +17,7 @@ import java.util.Properties;
 public class PlacesApiDataSource {
 
 
-    public String getApiKey() throws Exception{
+    private String getApiKey() throws Exception{
         Properties properties=new Properties();
         try (InputStream is = new FileInputStream("src/main/resources/application.properties")) {
             properties.load(is);
