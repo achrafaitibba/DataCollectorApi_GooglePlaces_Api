@@ -77,8 +77,8 @@ public class responseRepository implements IResponse {
 
             data.add(new response(
                     details.name = details.name == null ? "NoData_Hh" : details.name,
-                    request.getCity(),
-                    request.getCountry(),
+                    request.getCity().toUpperCase()+" and nearby cities within a "+request.getRidus()+"km ridus",
+                    request.getCountry().toUpperCase(),
                     details.formattedAddress = details.formattedAddress == null ? "NoData_Hh" : details.formattedAddress,
                     details.formattedPhoneNumber = details.formattedPhoneNumber == null ? "NoData_Hh" : details.formattedPhoneNumber,
                     details.website /*= details.website == null ? new URL(" https://www.example.com:8080/path?param1=value1") : details.website*/,
