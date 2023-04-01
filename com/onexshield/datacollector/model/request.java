@@ -23,18 +23,14 @@ public class request {
         this.country = country;
         if(ridus>50){
             this.ridus = 50;
+        }else if( ridus <5 ){
+            this.ridus = 5;
         }else {
             this.ridus = ridus;
         }
 
     }
 
-    public request(String domain, String city, String country) {
-        this.domain = domain;
-        this.city = city;
-        this.country = country;
-        ridus = 5;
-    }
 
     public String getDomain() {
         return domain;
