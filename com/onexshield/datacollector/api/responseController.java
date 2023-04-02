@@ -30,4 +30,9 @@ public class responseController {
         return responseService.getData(request);
     }
 
+    @GetMapping("/test")
+    public String test(){
+        return "hello";
+    }
+
 }

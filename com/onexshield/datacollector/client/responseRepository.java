@@ -12,9 +12,7 @@ import com.onexshield.datacollector.model.response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 @Repository("v1")
 public class responseRepository implements IResponse {

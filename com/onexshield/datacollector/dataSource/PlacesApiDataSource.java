@@ -1,13 +1,7 @@
 package com.onexshield.datacollector.dataSource;
 
 import com.google.maps.GeoApiContext;
-
-import com.google.maps.PlacesApi;
-import com.google.maps.model.LatLng;
-import com.google.maps.model.PlacesSearchResponse;
-import com.onexshield.datacollector.model.request;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
