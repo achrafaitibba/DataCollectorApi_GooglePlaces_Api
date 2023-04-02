@@ -6,10 +6,7 @@ import com.onexshield.datacollector.service.responseService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -25,9 +22,16 @@ public class responseController {
         this.responseService = responseService;
     }
 
-    @GetMapping
+    @GetMapping("/")
     public ArrayList<response> getData(@Valid @NotNull @RequestBody request request)throws Exception{
         return responseService.getData(request);
+    }
+    @GetMapping()
+    public ArrayList<response> getData( @RequestParam(value = "domain", required = true) String domain,
+                                        @RequestParam(value = "city", required = true) String city,
+                                        @RequestParam(value = "country", required = true) String country,
+                                        @RequestParam(value = "radius", required = true) int radius)throws Exception{
+        return responseService.getData(new request(domain,city,country,radius));
     }
 
     @GetMapping("/test")

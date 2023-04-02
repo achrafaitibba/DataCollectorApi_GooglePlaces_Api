@@ -11,22 +11,22 @@ public class request {
     @NotBlank
     private final String country;
 
-    private final int ridus;
+    private final int radius;
 
 
     public request(@JsonProperty("domain") String domain,
                    @JsonProperty("city") String city,
                    @JsonProperty("country") String country,
-                   @JsonProperty("ridus") int ridus) {
+                   @JsonProperty("radius") int ridus) {
         this.domain = domain;
         this.city = city;
         this.country = country;
         if(ridus>50){
-            this.ridus = 50;
+            this.radius = 50;
         }else if( ridus <5 ){
-            this.ridus = 5;
+            this.radius = 5;
         }else {
-            this.ridus = ridus;
+            this.radius = ridus;
         }
 
     }
@@ -43,6 +43,6 @@ public class request {
     public String getCountry() {
         return country;
     }
-    public int getRidus(){return ridus; }
+    public int getRadius(){return radius; }
 
 }

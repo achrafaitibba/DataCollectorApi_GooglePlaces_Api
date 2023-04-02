@@ -21,7 +21,7 @@ public class PlacesApiDataSource {
     public GeoApiContext getApiAccess()throws Exception{
         // Set up the GeoApiContext with your API key
         return new GeoApiContext.Builder()
-                .apiKey(getApiKey())
+                .apiKey("AIzaSyC-Ka758DTqHlJsHkc_H9DkQUZOoaxWwUI")
                 .build();
     }
 

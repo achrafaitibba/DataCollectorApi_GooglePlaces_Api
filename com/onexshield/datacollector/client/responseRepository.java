@@ -41,7 +41,7 @@ public class responseRepository implements IResponse {
         LatLng location = getLatLng(request.getCity() + ", " + request.getCountry(), context);
         // Perform a nearby search for places matching the specified domain within the specified radius and location
         return  PlacesApi.nearbySearchQuery(context, location)
-                .radius(request.getRidus()*1000) // 5km default radius ;
+                .radius(request.getRadius()*1000) // 5km default radius ;
                 .keyword(request.getDomain())
                 .await();
     }
@@ -75,7 +75,7 @@ public class responseRepository implements IResponse {
 
             data.add(new response(
                     details.name = details.name == null ? "NoData_Hh" : details.name,
-                    request.getCity().toUpperCase()+" and nearby cities within a "+request.getRidus()+"km ridus",
+                    request.getCity().toUpperCase()+" and nearby cities within a "+request.getRadius()+"km ridus",
                     request.getCountry().toUpperCase(),
                     details.formattedAddress = details.formattedAddress == null ? "NoData_Hh" : details.formattedAddress,
                     details.formattedPhoneNumber = details.formattedPhoneNumber == null ? "NoData_Hh" : details.formattedPhoneNumber,
