@@ -11,7 +11,7 @@ import java.util.Properties;
 public class PlacesApiDataSource {
 
 
-    private String getApiKey() throws Exception{
+    public String getApiKey() throws Exception{
         Properties properties=new Properties();
         try (InputStream is = new FileInputStream("src/main/resources/application.properties")) {
             properties.load(is);
@@ -21,7 +21,7 @@ public class PlacesApiDataSource {
     public GeoApiContext getApiAccess()throws Exception{
         // Set up the GeoApiContext with your API key
         return new GeoApiContext.Builder()
-                .apiKey("AIzaSyC-Ka758DTqHlJsHkc_H9DkQUZOoaxWwUI")
+                .apiKey(getApiKey())
                 .build();
     }
 

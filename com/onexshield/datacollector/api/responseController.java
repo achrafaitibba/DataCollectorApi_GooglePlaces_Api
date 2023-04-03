@@ -30,10 +30,9 @@ public class responseController {
     public ArrayList<response> getData( @RequestParam(value = "domain", required = true) String domain,
                                         @RequestParam(value = "city", required = true) String city,
                                         @RequestParam(value = "country", required = true) String country,
-                                        @RequestParam(value = "radius", required = true) int radius)throws Exception{
+                                        @RequestParam(value = "radius" ,required = true) int radius)throws Exception{
         return responseService.getData(new request(domain,city,country,radius));
     }
-
     @GetMapping("/test")
     public String test(){
         return "hello";

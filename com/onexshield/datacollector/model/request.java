@@ -17,19 +17,20 @@ public class request {
     public request(@JsonProperty("domain") String domain,
                    @JsonProperty("city") String city,
                    @JsonProperty("country") String country,
-                   @JsonProperty("radius") int ridus) {
+                   @JsonProperty("radius") int radius) {
         this.domain = domain;
         this.city = city;
         this.country = country;
-        if(ridus>50){
+        if(radius>50){
             this.radius = 50;
-        }else if( ridus <5 ){
+        }else if( radius <5 ){
             this.radius = 5;
         }else {
-            this.radius = ridus;
+            this.radius = radius;
         }
 
     }
+
 
 
     public String getDomain() {
