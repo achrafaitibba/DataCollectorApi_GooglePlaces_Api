@@ -69,7 +69,7 @@ public class responseRepository implements IResponse {
             }
         }
 
-        // Extract the required data from the details and store them in an ArrayList of String arrays
+        // Extract the required data from the details and store them in an ArrayList of objects "response"
         ArrayList<response> data = new ArrayList<>();
         for (PlaceDetails details : detailsList) {
 
@@ -79,7 +79,7 @@ public class responseRepository implements IResponse {
                     request.getCountry().toUpperCase(),
                     details.formattedAddress = details.formattedAddress == null ? "NoData_Hh" : details.formattedAddress,
                     details.formattedPhoneNumber = details.formattedPhoneNumber == null ? "NoData_Hh" : details.formattedPhoneNumber,
-                    details.website /*= details.website == null ? new URL(" https://www.example.com:8080/path?param1=value1") : details.website*/,
+                    details.website ,
                     details.internationalPhoneNumber = details.internationalPhoneNumber == null ? "NoData_Hh" : details.internationalPhoneNumber,
                     details.permanentlyClosed = !details.permanentlyClosed ? false : details.permanentlyClosed,
                     details.openingHours,

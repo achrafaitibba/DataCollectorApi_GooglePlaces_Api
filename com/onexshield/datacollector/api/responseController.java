@@ -21,7 +21,10 @@ public class responseController {
 
         this.responseService = responseService;
     }
-
+    /*
+    * to enable crossOrigin only for this methode use :
+    * @CrossOrigine(origins="*")
+    * */
     @GetMapping("/")
     public ArrayList<response> getData(@Valid @NotNull @RequestBody request request)throws Exception{
         return responseService.getData(request);

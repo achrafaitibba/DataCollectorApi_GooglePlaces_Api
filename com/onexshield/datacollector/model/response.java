@@ -11,7 +11,7 @@ public class response {
     private final String name;
     private final String city;
     private final String country;
-    private final String Address;
+    private final String address;
     private final String PhoneNumber;
     private final URL website;
     private final String internationalPhoneNumber;
@@ -30,7 +30,7 @@ public class response {
         this.name = name;
         this.city = city;
         this.country = country;
-        this.Address = address;
+        this.address = address;
         this.PhoneNumber = phoneNumber;
         this.website = website;
         this.internationalPhoneNumber = internationalPhoneNumber;
@@ -55,7 +55,7 @@ public class response {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public String getPhoneNumber() {
