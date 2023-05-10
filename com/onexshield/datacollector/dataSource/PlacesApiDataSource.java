@@ -8,16 +8,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class PlacesApiDataSource {
 
-    private apiKeyDao apiKey;
 
-    @Autowired
-    public PlacesApiDataSource(apiKeyDao apiKey){
-        this.apiKey = apiKey;
-    }
+
+
     public GeoApiContext getApiAccess()throws Exception{
         // Set up the GeoApiContext with your API key
         return new GeoApiContext.Builder()
-                .apiKey(apiKey.getApiKey())
+                .apiKey("AIzaSyBClQoqpOm4VjA8UJP9VDm9XCQkgXu4Luw")
                 .build();
     }
 
