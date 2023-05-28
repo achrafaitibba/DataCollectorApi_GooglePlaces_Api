@@ -36,17 +36,6 @@ public class responseController {
                                         @RequestParam(value = "radius" ,required = true) int radius)throws Exception{
         return responseService.getData(new request(domain,city,country,radius));
     }
-    @GetMapping("/test")
-    public String[] test(){
-        String[] testMessage= {"{This is a testing endpoint , now you are in the correct path to test/consume the API hh",
-        "You can send a GET request to the following endpoint :",
-        "/api/v1/response/",
-        "the JSON body should be like this :",
-        "{domain:something_hh,city:city_hh,country:country_hh,radius:radius_hh}",
-        "or you can use the following endpoint to pass values within the link as follow :",
-        "/api/v1/response?domain=domain&city=city&country=country&radius=radius",
-        "domain & city & country : are String values, the radius must be an INTEGER}"};
-        return testMessage;
-    }
+   
 
 }
