@@ -36,6 +36,6 @@ public class responseController {
                                         @RequestParam(value = "radius" ,required = true) int radius)throws Exception{
         return responseService.getData(new request(domain,city,country,radius));
     }
-   
+
 
 }
