@@ -16,4 +16,11 @@ public class DataCollectorApplication extends SpringBootServletInitializer {
         return application.sources(DataCollectorApplication.class);
     }
 
+    //todo /UI react
+    //todo /export to excel file "downloadable file"
+    //todo /api key should be passed in "inputs"
+    //todo /pagination
+    //todo /change request body
+    //todo /no dataSource
+
 }
