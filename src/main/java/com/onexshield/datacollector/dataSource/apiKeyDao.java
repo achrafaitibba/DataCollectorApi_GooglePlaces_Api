@@ -19,14 +19,14 @@ public class apiKeyDao {
 
 
     public String getApiKey() throws Exception{
-//        String sql = "select keyString from keysValues where id = ?";
-//        PreparedStatement statement = connection.getConnected().prepareStatement(sql);
-//        statement.setInt(1,1);
-//        ResultSet resultSet = statement.executeQuery();
-//        String key = "";
-//        while(resultSet.next()){
-//            key = resultSet.getString(1);
-//        }
-        return  "1";
+        String sql = "select keyString from keysValues where id = ?";
+        PreparedStatement statement = connection.getConnected().prepareStatement(sql);
+        statement.setInt(1,1);
+        ResultSet resultSet = statement.executeQuery();
+        String key = "";
+        while(resultSet.next()){
+            key = resultSet.getString(1);
+        }
+        return  key;
     }
 }
